@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +22,21 @@ namespace lab2_3
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Person> People { set; get; }
+
         public MainWindow()
         {
+         
             InitializeComponent();
+            People = new ObservableCollection<Person>
+            {
+                new Person("John", "Smith", 1998, "London"),
+                new Person("Anna", "Brown", 2000, "Paris")
+            };
+
+            DataContext = this;
         }
+
+        
     }
 }
