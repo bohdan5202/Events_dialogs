@@ -31,12 +31,19 @@ namespace lab2_3
             People = new ObservableCollection<Person>
             {
                 new Person("John", "Smith", 1998, "London"),
-                new Person("Anna", "Brown", 2000, "Paris")
+                new Person("Anna", "Brown", 2000, "Paris"),
+                new Person("Michael", "Johnson", 1995, "New York"),
+                new Person("Emily", "Davis", 1999, "Tokyo"),
+                new Person("David", "Wilson", 1997, "Sydney")
             };
 
             DataContext = this;
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 modeless = new Window1(People);
+            modeless.Show();
+        }
     }
 }

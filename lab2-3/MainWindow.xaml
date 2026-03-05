@@ -7,15 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView ItemsSource="{Binding People}" Margin="100,60,100,60">
+        <ListView ItemsSource="{Binding People}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="100,88,100,31">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="First Name" Width="150" DisplayMemberBinding="{Binding FirstName}" />
-                    <GridViewColumn Header="Last Name" Width="150" DisplayMemberBinding="{Binding LastName}" />
-                    <GridViewColumn Header="Year" Width="150" DisplayMemberBinding="{Binding YearOfBirth}" />
-                    <GridViewColumn Header="City" Width="150" DisplayMemberBinding="{Binding City}" />
+                    <GridViewColumn Header="First Name" Width="145" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last Name" Width="145" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Year" Width="145" DisplayMemberBinding="{Binding YearOfBirth}" />
+                    <GridViewColumn Header="City" Width="145" DisplayMemberBinding="{Binding City}" />
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Click="Button_Click" Height="35" Width="60"/>
     </Grid>
 </Window>
