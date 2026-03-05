@@ -32,6 +32,7 @@ namespace lab2_3
         public Modal(Person toEdit)
         {
             InitializeComponent();
+            main_label.Content = "Edit Person Information";
             _toEdit = toEdit;
 
             txtFirstNameModal.Text = toEdit.FirstName;

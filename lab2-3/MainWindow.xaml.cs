@@ -68,12 +68,12 @@ namespace lab2_3
                 {
                     Modal dialog = new Modal(selectedPerson);
                     bool? result = dialog.ShowDialog();
-
-                    if (result == true)
-                    {
-                        //listViewPeople.Items.Refresh();
-                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please select item to edit", "Nothing selected",
+                   MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         } 
     }

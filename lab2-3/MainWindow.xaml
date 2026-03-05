@@ -20,7 +20,7 @@
         <Button Content="Add" HorizontalAlignment="Right" Margin="0,25,290,0" VerticalAlignment="Top" Click="Button_Click" Height="35" Width="60"/>
         <Button Content="Edit" HorizontalAlignment="Right" Margin="0,25,100,0" VerticalAlignment="Top" Click="Button_Click_2" Height="35" Width="60"/>
         <Button Content="Add single" HorizontalAlignment="Right" Margin="0,25,180,0" VerticalAlignment="Top" Click="Button_Click_1" Height="35" Width="90"/>
-        <Label Content="Program to store a list of people" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
+        <Label Content="Program to store a list of people" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
 
     </Grid>
 </Window>

@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
         <!-- Title -->
-        <Label Content="Add Single Person Information" 
+        <Label x:Name="main_label" Content="Add Single Person Information" 
                Grid.Row="0" 
                HorizontalAlignment="Center" 
                Margin="0,20,0,20" 
