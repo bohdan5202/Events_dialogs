@@ -20,11 +20,24 @@ namespace lab2_3
     /// </summary>
     public partial class Modal : Window
     {
-        public Person Result { get; set; }
+        private Person _toEdit;
+        public Person Result => _toEdit;
 
         public Modal()
         {
             InitializeComponent();
+            _toEdit = new Person("", "", 0, "");
+        }
+
+        public Modal(Person toEdit)
+        {
+            InitializeComponent();
+            _toEdit = toEdit;
+
+            txtFirstNameModal.Text = toEdit.FirstName;
+            txtLastNameModal.Text = toEdit.LastName;
+            txtYearOfBirthModal.Text = toEdit.YearOfBirth.ToString();
+            txtCityOfResidenceModal.Text = toEdit.City;
         }
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
@@ -55,8 +68,12 @@ namespace lab2_3
 
             try
             {
-                Result =(new Person(txtFirstNameModal.Text, txtLastNameModal.Text, year, txtCityOfResidenceModal.Text));
+                _toEdit.FirstName = txtFirstNameModal.Text;
+                _toEdit.LastName = txtLastNameModal.Text;
+                _toEdit.YearOfBirth = year;
+                _toEdit.City = txtCityOfResidenceModal.Text;
                 this.DialogResult = true;
+
             }
             catch (Exception ex)
             {

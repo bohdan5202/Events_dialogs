@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Lab2-3" Height="450" Width="800">
     <Grid>
-        <ListView ItemsSource="{Binding People}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="100,88,100,31">
+        <ListView x:Name="listViewPeople" ItemsSource="{Binding People}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="100,88,100,31">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="First Name" Width="145" DisplayMemberBinding="{Binding FirstName}" />
@@ -17,6 +17,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Click="Button_Click" Height="35" Width="60"/>
+        <Button Content="Add" HorizontalAlignment="Right" Margin="0,25,290,0" VerticalAlignment="Top" Click="Button_Click" Height="35" Width="60"/>
+        <Button Content="Edit" HorizontalAlignment="Right" Margin="0,25,100,0" VerticalAlignment="Top" Click="Button_Click_2" Height="35" Width="60"/>
+        <Button Content="Add single" HorizontalAlignment="Right" Margin="0,25,180,0" VerticalAlignment="Top" Click="Button_Click_1" Height="35" Width="90"/>
+        <Label Content="Program to store a list of people" HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
+
     </Grid>
 </Window>

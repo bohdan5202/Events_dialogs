@@ -26,7 +26,7 @@ namespace lab2_3
 
         public MainWindow()
         {
-         
+
             InitializeComponent();
             People = new ObservableCollection<Person>
             {
@@ -45,5 +45,36 @@ namespace lab2_3
             Window1 modeless = new Window1(People);
             modeless.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Modal dialog = new Modal();
+
+            bool? result = dialog.ShowDialog();
+
+            if (result == true)
+            {
+                People.Add(dialog.Result);
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (listViewPeople.SelectedItem != null)
+            {
+                Person selectedPerson = listViewPeople.SelectedItem as Person;
+
+                if (selectedPerson != null)
+                {
+                    Modal dialog = new Modal(selectedPerson);
+                    bool? result = dialog.ShowDialog();
+
+                    if (result == true)
+                    {
+                        //listViewPeople.Items.Refresh();
+                    }
+                }
+            }
+        } 
     }
 }
